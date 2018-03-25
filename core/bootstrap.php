@@ -11,7 +11,12 @@ App::bind('database', new QueryBuilder(
 	Connection::make(App::get('config')['database'])
 ));
 
-function view ($name){
+function view ($name,$data=[]){
 
-	return require "view/{$name}.view.php";
+	extract($data);
+	return require "views/{$name}.view.php";
+}
+function redirect($path){
+
+	 header("Location: /{$path}");
 }
