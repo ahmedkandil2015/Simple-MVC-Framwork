@@ -2,7 +2,8 @@
 /**
 * 
 */
-namespace App\Controller;
+namespace App\Controllers;
+use App\Core\App;
 class UserController
 {
 	
